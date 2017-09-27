@@ -20,8 +20,7 @@ public class Player {
 	}
 
 	public void winBall() {
-		// TODO Auto-generated method stub
-		
+		this.score=score+1;	
 	}
 
 	public String getName() {
