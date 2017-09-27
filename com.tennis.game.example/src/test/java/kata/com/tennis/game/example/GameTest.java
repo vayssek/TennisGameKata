@@ -26,37 +26,63 @@ public class GameTest {
 	@Test
 	public void fifteenShouldBeDescriptionForScore1() {
 		player1.winBall();
-		assertEquals("15,0",game.getScore());
+		assertEquals("15,0", game.getScore());
 	}
 
 	@Test
 	public void fifteenForEachShouldBeDescriptionForScore1() {
 		player1.winBall();
 		player2.winBall();
-		assertEquals("15,15",game.getScore());
+		assertEquals("15,15", game.getScore());
 	}
-	
+
 	@Test
 	public void thirteenShouldBeDescriptionForScore2() {
 		player1.winBall();
 		player1.winBall();
-		assertEquals("30,0",game.getScore());
+		assertEquals("30,0", game.getScore());
 	}
-	
+
 	@Test
 	public void fortyShouldBeDescriptionForScore3() {
 		player1.winBall();
 		player1.winBall();
 		player1.winBall();
-		assertEquals("40,0",game.getScore());
+		assertEquals("40,0", game.getScore());
 	}
-	
+
 	@Test
 	public void fortyShouldBeDescriptionForScore4() {
 		player1.winBall();
 		player1.winBall();
 		player1.winBall();
 		player1.winBall();
-		assertEquals("P1 won",game.getScore());
+		assertEquals("P1 won", game.getScore());
 	}
+
+	@Test
+	public void advantageShouldBeDescriptionWhenLeastThreePointsHaveNeenScoredByEachSideAndPlayerHasOnePointMoreThanHisOpponent() {
+		player1.winBall();
+		player1.winBall();
+		player1.winBall();
+		player2.winBall();
+		player2.winBall();
+		player2.winBall();
+		player2.winBall();
+		assertEquals("advantage P2",game.getScore());
+	}
+
+	@Test
+	public void deuceShouldBeDescriptionWhenAtLeastThreePointsHaveBeenScoredByEachPlayerAndTheScoresAreEqual() {
+		player1.winBall();
+		player1.winBall();
+		player1.winBall();
+		player2.winBall();
+		player2.winBall();
+		player2.winBall();
+		player2.winBall();
+		player1.winBall();
+		assertEquals("deuce",game.getScore());
+	}
+
 }
