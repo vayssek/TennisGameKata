@@ -6,7 +6,7 @@ import java.util.List;
 public class Player {
 	
 	private String name;
-	public static final List<String> scoreDescription = Arrays.asList("0", "15");
+	public static final List<String> scoreDescription = Arrays.asList("0", "15","30","40");
 	private int score;
  
 	public Player(String name) {
