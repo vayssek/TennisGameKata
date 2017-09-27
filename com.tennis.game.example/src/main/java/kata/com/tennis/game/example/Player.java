@@ -13,4 +13,9 @@ public class Player {
 		return "0";
 	}
 
+	public void winBall() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
