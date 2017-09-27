@@ -29,4 +29,26 @@ public class GameTest {
 		assertEquals("15,0",game.getScore());
 	}
 
+	@Test
+	public void fifteenForEachShouldBeDescriptionForScore1() {
+		player1.winBall();
+		player2.winBall();
+		assertEquals("15,15",game.getScore());
+	}
+	
+	@Test
+	public void thirteenShouldBeDescriptionForScore2() {
+		player1.winBall();
+		player1.winBall();
+		assertEquals("30,0",game.getScore());
+	}
+	
+	@Test
+	public void fortyShouldBeDescriptionForScore2() {
+		player1.winBall();
+		player1.winBall();
+		player1.winBall();
+		assertEquals("40,0",game.getScore());
+	}
+	
 }
