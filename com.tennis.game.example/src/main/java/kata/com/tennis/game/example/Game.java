@@ -11,8 +11,8 @@ public class Game {
 	}
 
 	public String getScore() {
-		String scoreP1=player1.getScore();
-		String scoreP2=player2.getScore();
+		String scoreP1=player1.getScoreDescription();
+		String scoreP2=player2.getScoreDescription();
 		return scoreP1+","+scoreP2;
 	}
 
