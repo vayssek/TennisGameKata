@@ -1,6 +1,8 @@
 package kata.com.tennis.game.example;
 
 import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class GameTest {
 
@@ -13,5 +15,11 @@ public class GameTest {
         player1 = new Player("P1");
         player2 = new Player("P2");
         game = new Game(player1, player2);
+    }
+    
+    @Test
+    public void zeroShouldBeDescriptionForScore0() {
+        Game game = new Game(player1, player2);
+        assertEquals("0,0", game.getScore());
     }
 }

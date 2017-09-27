@@ -6,4 +6,9 @@ public class Game {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Object getScore() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
