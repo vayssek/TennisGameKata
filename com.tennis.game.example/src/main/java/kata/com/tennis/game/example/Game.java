@@ -13,9 +13,9 @@ public class Game {
 	public String getScore() {
 		if ((player1.getScore() > 3 || player2.getScore() > 3)&& Math.abs(player2.getScore() - player1.getScore()) >= 2) {
                return getLeadPlayer().getName() + " won";
-            } else if (player1.getScore() > 3 && player2.getScore() > 3 && player1.getScore() == player2.getScore()) {
+            } else if (player1.getScore() >= 3 && player2.getScore() >= 3 && player1.getScore() == player2.getScore()) {
                 return "deuce";
-            } else if((player1.getScore() > 3 || player2.getScore() > 3)&&Math.abs(player2.getScore() - player1.getScore()) ==1){
+            } else if((player1.getScore() >= 3 || player2.getScore() >= 3)&&Math.abs(player2.getScore() - player1.getScore()) ==1){
                 return "advantage " + getLeadPlayer().getName();
             }else{
 		String scoreP1 = player1.getScoreDescription();

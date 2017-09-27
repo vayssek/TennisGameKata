@@ -52,7 +52,7 @@ public class GameTest {
 	}
 
 	@Test
-	public void fortyShouldBeDescriptionForScore4() {
+	public void wonShouldBeDescriptionForScore4() {
 		player1.winBall();
 		player1.winBall();
 		player1.winBall();
@@ -80,9 +80,26 @@ public class GameTest {
 		player2.winBall();
 		player2.winBall();
 		player2.winBall();
+		assertEquals("deuce",game.getScore());
+	}
+	
+	@Test
+	public void wonShouldBeTheDescriptionOnlyIfPlayersAreSeparetedByTwoPointsWhenFortyIsReachedByBoth() {
+		player1.winBall();
+		player1.winBall();
+		player1.winBall();
 		player2.winBall();
+		player2.winBall();
+		player2.winBall();
+		assertEquals("deuce",game.getScore());
+		player2.winBall();
+		assertEquals("advantage P2",game.getScore());
 		player1.winBall();
 		assertEquals("deuce",game.getScore());
+		player1.winBall();
+		assertEquals("advantage P1",game.getScore());
+		player1.winBall();
+		assertEquals("P1 won", game.getScore());
 	}
 
 }
