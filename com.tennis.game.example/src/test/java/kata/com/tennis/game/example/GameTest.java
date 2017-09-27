@@ -44,11 +44,19 @@ public class GameTest {
 	}
 	
 	@Test
-	public void fortyShouldBeDescriptionForScore2() {
+	public void fortyShouldBeDescriptionForScore3() {
 		player1.winBall();
 		player1.winBall();
 		player1.winBall();
 		assertEquals("40,0",game.getScore());
 	}
 	
+	@Test
+	public void fortyShouldBeDescriptionForScore4() {
+		player1.winBall();
+		player1.winBall();
+		player1.winBall();
+		player1.winBall();
+		assertEquals("P1 won",game.getScore());
+	}
 }

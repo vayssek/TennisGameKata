@@ -11,9 +11,16 @@ public class Game {
 	}
 
 	public String getScore() {
-		String scoreP1=player1.getScoreDescription();
-		String scoreP2=player2.getScoreDescription();
-		return scoreP1+","+scoreP2;
+		if (player1.getScore() > 3 || player2.getScore() > 3) {
+			return getLeadPlayer().getName() + " won";
+		}else {
+		String scoreP1 = player1.getScoreDescription();
+		String scoreP2 = player2.getScoreDescription();
+		return scoreP1 + "," + scoreP2;
+		}
 	}
 
+	private Player getLeadPlayer() {
+		return (player1.getScore() > player2.getScore()) ? player1 : player2;
+	}
 }
