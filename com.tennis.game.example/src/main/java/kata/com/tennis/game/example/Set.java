@@ -6,4 +6,9 @@ public class Set {
 		// TODO Auto-generated constructor stub
 	}
 
+	public int[] getScore() {
+		int scores[] = {0,0};
+		return scores;
+	}
+
 }
