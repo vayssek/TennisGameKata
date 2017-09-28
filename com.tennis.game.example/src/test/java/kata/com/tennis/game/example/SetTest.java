@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 public class SetTest {
 	
 	private static int[] BEGINNING_SCORE= {0,0};
+	private static int[] FIRST_GAME_FOR_P1= {1,0};
 	Player player1;
 	Player player2;
 	Game game;
@@ -26,4 +27,14 @@ public class SetTest {
 		set = new Set(game);
 		assertArrayEquals(BEGINNING_SCORE, set.getScore());
 	}
+	
+	@Test
+	public void oneToZeroShouldBeDescriptionIfPlayerOneWinTheFirstGame() {
+		Game game = new Game(player1, player2);
+		set = new Set(game);
+		set.playGame(game);
+		assertArrayEquals(FIRST_GAME_FOR_P1, set.getScore());
+	}
+	
+	
 }

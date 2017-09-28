@@ -11,4 +11,9 @@ public class Set {
 		return scores;
 	}
 
+	public void playGame(Game game) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
